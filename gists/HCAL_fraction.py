@@ -58,7 +58,7 @@ for event in events:
     event.getByLabel(pfLabel, pfCandidates)
 
     for pfc in pfCandidates.product():
-        if abs(pfc.pdgId()) not in [211, 321, 2212]: continue
+        if abs(pfc.pdgId()) not in [211]: continue
         if pfc.charge() == 0: continue
         if abs(pfc.eta()) > 1.3: continue
         pt = pfc.pt()
